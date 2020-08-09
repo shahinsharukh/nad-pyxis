@@ -21,4 +21,7 @@
          * 2: show the clock in the left position (LTR)
     -->
     <integer name="def_clock_position">2</integer>
+
+    <!-- Screen off FOD -->
+    <bool name="config_supportScreenOffFod">true</bool>
 </resources>
