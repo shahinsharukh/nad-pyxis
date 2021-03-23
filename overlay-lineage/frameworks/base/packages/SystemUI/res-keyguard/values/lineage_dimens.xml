@@ -18,6 +18,4 @@
     <!-- The minimum bottom margin of the keyguard security container -->
     <dimen name="kg_security_container_min_bottom_margin">240dp</dimen>
 
-    <!-- Whether to show a custom view for FOD -->
-    <bool name="config_needCustomFODView">true</bool>
 </resources>
