@@ -66,3 +66,6 @@ persist.radio.sar_sar_sensor=true
 
 # WiFi Display
 persist.sys.wfd.virtual=0
+
+# Seamless transfer
+sys.fflag.override.settings_seamless_transfer=true
