@@ -837,4 +837,7 @@
     <!-- Hide FOD while Going to sleep from lockscreen to avoid HBM flicker
          or FOD Circle hiding after the screen is put to sleep -->
     <bool name="config_hideFodCircleGoingToSleep">true</bool>
+
+    <!-- Whether to show a custom view for FOD -->
+    <bool name="config_needCustomFODView">true</bool>
 </resources>

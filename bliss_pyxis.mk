@@ -1,17 +1,17 @@
 #
-# Copyright (C) 2018-2019 The LineageOS Project
+# Copyright (C) 2020 BlissTeam
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
 $(call inherit-product, device/xiaomi/pyxis/device.mk)
 
-# Inherit some common Lineage stuff.
+# Inherit some common Bliss stuff.
 EXTRA_FOD_ANIMATIONS := true
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/bliss/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineage_pyxis
+PRODUCT_NAME := bliss_pyxis
 PRODUCT_DEVICE := pyxis
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Mi 9 Lite
@@ -24,3 +24,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="pyxis"
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+
+#Official Build
+BLISS_BUILDTYPE=OFFICIAL
+TARGET_WANTS_FOD_ANIMATIONS := true
