@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/bliss_pyxis.mk
+    $(LOCAL_DIR)/nad_pyxis.mk
 
 COMMON_LUNCH_CHOICES := \
-    bliss_pyxis-user \
-    bliss_pyxis-userdebug \
-    bliss_pyxis-eng
+    nad_pyxis-user \
+    nad_pyxis-userdebug \
+    nad_pyxis-eng

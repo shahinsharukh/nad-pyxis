@@ -19,7 +19,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-lineage
+    $(LOCAL_PATH)/overlay-nad
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
@@ -73,7 +73,7 @@ PRODUCT_PACKAGES += \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sdm710
 
 PRODUCT_COPY_FILES += \
-    vendor/bliss/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    vendor/nusantara/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # FM
 PRODUCT_PACKAGES += \
@@ -129,3 +129,34 @@ PRODUCT_COPY_FILES += \
 # Sensors
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
+    
+# Prebuilts MiuiCamera
+PRODUCT_PACKAGES += \
+    MiuiCamera 
+
+# OnePlus Gallery
+PRODUCT_PACKAGES += \
+    OPGallery
+    
+# Oneplus Stuff
+PRODUCT_PACKAGES += \
+    OnePlusRecentsProvider \
+    OPLauncher2
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/OPLauncher2/etc/permissions/privapp-permissions-op-launcher.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-op-launcher.xml \
+    $(LOCAL_PATH)/OPLauncher2/etc/sysconfig/op-launcher-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/op-launcher-hiddenapi-package-whitelist.xml \
+    $(LOCAL_PATH)/OPLauncher2/etc/default-permissions/default-permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-permissions.xml
+    
+# OnePlus Gallery
+PRODUCT_PACKAGES += \
+    OPWidget    
+
+PRODUCT_PACKAGES += \
+    remove-Launcher3QuickStep \
+    
+# Screen Recorder
+PRODUCT_PACKAGES += \
+    ScreenRecorder         
+        
+    

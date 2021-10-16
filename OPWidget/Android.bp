@@ -1,0 +1,10 @@
+android_app_import {
+        name: "OPWidget",
+        owner: "oneplus",
+        apk: "OPWidget.apk",
+        presigned: true,
+        dex_preopt: {
+                enabled: false,
+        },
+        privileged: false,
+}
