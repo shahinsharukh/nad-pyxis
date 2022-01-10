@@ -19,7 +19,7 @@ TARGET_SCREEN_WIDTH := 1080
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
-    $(LOCAL_PATH)/overlay-nad
+    $(LOCAL_PATH)/overlay-legion
 
 PRODUCT_PACKAGES += \
     NoCutoutOverlay
@@ -48,9 +48,7 @@ $(call inherit-product, device/xiaomi/sdm710-common/sdm710.mk)
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_platform_info_intcodec.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info_intcodec.xml \
-    $(LOCAL_PATH)/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     $(LOCAL_PATH)/audio/audio_tuning_mixer.txt:$(TARGET_COPY_OUT_VENDOR)/etc/audio_tuning_mixer.txt \
-    $(LOCAL_PATH)/audio/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     $(LOCAL_PATH)/audio/mixer_paths_mtp.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_mtp.xml \
     $(LOCAL_PATH)/audio/mixer_paths_overlay_dynamic.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_overlay_dynamic.xml \
     $(LOCAL_PATH)/audio/mixer_paths_overlay_static.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths_overlay_static.xml \
@@ -73,7 +71,7 @@ PRODUCT_PACKAGES += \
     vendor.lineage.biometrics.fingerprint.inscreen@1.0-service.xiaomi_sdm710
 
 PRODUCT_COPY_FILES += \
-    vendor/nusantara/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
+    vendor/legion/config/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/vendor.lineage.biometrics.fingerprint.inscreen.xml
 
 # FM
 PRODUCT_PACKAGES += \
@@ -138,25 +136,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OPGallery
     
-# Oneplus Stuff
-PRODUCT_PACKAGES += \
-    OnePlusRecentsProvider \
-    OPLauncher2
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/OPLauncher2/etc/permissions/privapp-permissions-op-launcher.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-op-launcher.xml \
-    $(LOCAL_PATH)/OPLauncher2/etc/sysconfig/op-launcher-hiddenapi-package-whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/op-launcher-hiddenapi-package-whitelist.xml \
-    $(LOCAL_PATH)/OPLauncher2/etc/default-permissions/default-permissions.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/default-permissions/default-permissions.xml
-    
 # OnePlus Gallery
 PRODUCT_PACKAGES += \
-    OPWidget    
+    OPWidget 
+    
+# Mixplorer
+PRODUCT_PACKAGES += \
+    Mixplorer
 
-PRODUCT_PACKAGES += \
-    remove-Launcher3QuickStep \
-    
-# Screen Recorder
-PRODUCT_PACKAGES += \
-    ScreenRecorder         
-        
-    
+

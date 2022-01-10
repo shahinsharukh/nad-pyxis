@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/nad_pyxis.mk
+    $(LOCAL_DIR)/legion_pyxis.mk
 
 COMMON_LUNCH_CHOICES := \
-    nad_pyxis-user \
-    nad_pyxis-userdebug \
-    nad_pyxis-eng
+    legion_pyxis-user \
+    legion_pyxis-userdebug \
+    legion_pyxis-eng
